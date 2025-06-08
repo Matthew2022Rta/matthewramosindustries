@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/css.css" />
+  <script defer src="/dom.js"></script>
+</head>
+<body>
+  <header>
+    <img src="/logo.png" alt="Site Logo" width="400" />
+  </header>
+
+  <main id="main-content">
+    <img src="/headshot.png" alt="Headshot" width="200" />
+    <nav>
+      <ul style="display: flex; gap: 20px; list-style: none;">
+        <li><a href="#" id="nav-home">Home</a></li>
+        <li><a href="#" id="nav-resume">Resume</a></li>
+        <li><a href="#" id="nav-contact">Contact</a></li>
+        <li> <a href="#" id="galaxia">Play Space Monkey!</a></li> 
+      </ul>
+    </nav>
+    <h2>Welcome to my portfolio!</h2>
+    <p>Hi, I'm Matthew Ramos—a hands-on builder, creative thinker, and aspiring computer scientist currently studying at New York University. I grew up in Elmhurst, Queens, where my curiosity took shape through toys made from duct tape and hours spent engineering with LEGOs. That same inventive spirit still drives me today, whether I’m building a flamethrower, restoring an Acura TL, or developing machine learning models. My work spans a range of disciplines—from carpentry and automotive repair to software development and engineering design. I’ve restored homes, designed foldable skateboards, built electric guitars from shovels, and trained computer vision models. Whether it’s physical fabrication or coding complex systems, I thrive at the intersection of creativity and technical precision. Outside the workshop and classroom, I enjoy snowboarding, longboarding, working on cars, sewing, and exploring how things work. My portfolio reflects my passion for learning through doing, solving real-world problems, and building things that are both functional and meaningful.</p>
+  <h1>Personal Projects</h1>
+
+
+  <h2>Space Monkey — Retro-Inspired Arcade Game</h2>
+<p><strong>Duration:</strong> May 2025 – June 2025</p>
+<p><strong>Location:</strong> Elmhurst, NY</p>
+
+<h3>Project Overview</h3>
+<p>
+  Space Monkey is a browser-based, multi-level arcade game built with pure JavaScript, HTML, and CSS — inspired by retro classics such as Galaxian, Pac-Man, Donkey Kong, Frogger, Space Invaders, and Breakout. Developed without any game engines or frameworks, the project demonstrates advanced DOM manipulation, game loop architecture, and full interactive design. The game was deployed on a personal website as part of a larger retro arcade suite.
+</p>
+
+<div id="spacemonkey-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+<script>
+  const spaceMonkeyContainer = document.getElementById('spacemonkey-gallery');
+  
+  const spaceMonkeyImages = [1, 2, 3, 4, 5, 6].map(i => `
+    <img src="game${i}.png" alt="Space Monkey Game ${i}" style="height: 200px; flex-shrink: 0;" />
+  `).join('');
+  
+  spaceMonkeyContainer.innerHTML = spaceMonkeyImages;
+</script>
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Engineered Dynamic Game Architecture:</strong> Built multi-level progression, state management, and win/lose conditions entirely in JavaScript.</li>
+  <li><strong>Implemented Real-Time Gameplay:</strong> Leveraged DOM manipulation and event handling to create smooth, interactive experiences.</li>
+  <li><strong>Developed Collision Detection:</strong> Designed both rectangular and grid-based collision detection systems.</li>
+  <li><strong>Created Modular Game Design:</strong> Built reusable components for game expansion and level integration.</li>
+  <li><strong>Integrated Custom Soundtracks:</strong> Added dynamic audio per level to enhance user experience.</li>
+  <li><strong>Optimized Performance:</strong> Applied performance optimization techniques for animation timing and responsiveness.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Advanced JavaScript (ES6+) and DOM manipulation</li>
+  <li>Game loop architecture & state management</li>
+  <li>Event-driven programming & performance optimization</li>
+  <li>Modular front-end development (HTML/CSS/JS)</li>
+</ul>
+
+  <h2>OnlyCars – Real-Time Forum Web App</h2>
+  <p><strong>Duration:</strong> January 2025 – Present</p>
+  <p><strong>Role:</strong> Full-Stack Developer</p>
+  <p><strong>Location:</strong> Elmhurst, NY</p>
+  
+  <h3>Project Overview</h3>
+  <p>
+    OnlyCars is a real-time, full-stack web forum built for car enthusiasts to post, share, and comment on vehicle builds and modifications. Designed with a MERN-style stack (MongoDB, Express, Node.js) and Handlebars, it includes robust authentication, real-time content updates, and media uploads. Users can create profiles, post car projects with photos via Multer, and interact in a live, session-managed environment.
+  </p>
+
+  <div id="onlycars-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+  <script>
+    const onlycarsContainer = document.getElementById('onlycars-gallery');
+    const onlycarsImages = [1, 2, 3].map(i => `
+      <img src="onlycars${i}.png" alt="OnlyCars Post ${i}" style="height: 200px; flex-shrink: 0;" />
+    `).join('');
+    onlycarsContainer.innerHTML = onlycarsImages;
+  </script>
+
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Built Authentication & Session Management:</strong> Implemented secure sign-up/log-in with Passport.js and maintained sessions for all user interactions.</li>
+  <li><strong>Developed Real-Time Posting System:</strong> Enabled users to create posts with images and display them in a live-updated feed.</li>
+  <li><strong>Handled File Uploads:</strong> Integrated Multer to support secure and scalable image uploads.</li>
+  <li><strong>Designed and Validated Schemas:</strong> Used Mongoose to enforce data integrity and backend validation.</li>
+  <li><strong>Test-Driven Development:</strong> Wrote unit tests using Mocha and Chai to ensure backend reliability and catch errors early.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Full-Stack Web Development (JavaScript, Node.js, Express, MongoDB, Handlebars)</li>
+  <li>User Authentication & Access Control</li>
+  <li>File Upload Handling (Multer)</li>
+  <li>Database Modeling with Mongoose</li>
+  <li>Backend Testing with Mocha & Chai</li>
+</ul>
+
+
+
+
+    <h2>Flamethrower Engineering Project</h2>
+<p><strong>Duration:</strong> July 2023 – August 2023</p>
+<p><strong>Role:</strong> Designer & Engineer</p>
+<p><strong>Inspiration:</strong> The Boring Company's "Not-a-Flamethrower"</p>
+
+<h3>Project Overview</h3>
+<p>
+  This project focused on designing a functional, push-button flamethrower inspired by The Boring Company's “Not-a-Flamethrower.” 
+  I sourced materials carefully and implemented strict safety protocols to ensure a balance between performance and user protection.
+</p>
+<div id="flamethrower-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+<script>
+    const flamethrowerContainer = document.getElementById('flamethrower-gallery');
+  
+    const flamethrowerImages = [1, 2, 3].map(i => `
+      <img src="flamethrower${i}.png" alt="Flamethrower Build ${i}" style="height: 200px; flex-shrink: 0;" />
+    `).join('');
+  
+    flamethrowerContainer.innerHTML = flamethrowerImages;
+  </script>
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Design & Assembly:</strong> Built a flamethrower with push-button ignition and ergonomic housing using a Nerf gun frame to secure internal components.</li>
+  <li><strong>Safety & Testing:</strong> Conducted extensive propane safety tests, eliminated leak risks, and implemented safety protocols for pressurized fuels, including night testing scenarios.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Creative Problem-Solving</li>
+  <li>Risk Management</li>
+  <li>Materials Sourcing</li>
+  <li>Safety Protocols</li>
+</ul>
+
+
+
+
+      <h2>Acura TL Restoration & Modification</h2>
+<p><strong>Duration:</strong> June 2024 – July 2024</p>
+<p><strong>Role:</strong> Automotive Modifier</p>
+
+<h3>Project Overview</h3>
+<p>
+  I undertook a full mechanical and aesthetic restoration of my Acura TL, addressing functionality,
+  safety, and design. This hands-on project involved diagnostics, part replacements, and major interior
+  and exterior improvements.
+</p>
+<div id="acura-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+<script>
+    const acuraContainer = document.getElementById('acura-gallery');
+  
+    const acuraImages = Array.from({ length: 12 }, (_, i) => {
+      const index = i + 1;
+      return `
+        <img src="acura${index}.png" alt="Acura ${index}" style="height: 200px; flex-shrink: 0;" />
+      `;
+    }).join('');
+  
+    acuraContainer.innerHTML = acuraImages;
+  </script>
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li>
+    <strong>Diagnostics & Repairs:</strong> Researched error codes and malfunctions using automotive forums and manuals. Diagnosed and replaced faulty parts such as <strong>coil packs</strong> and the <strong>Vapor Canister Purge Solenoid Valve</strong> with high-quality alternatives.
+  </li>
+  <li>
+    <strong>Entertainment System Upgrade:</strong> Installed a modern double-DIN radio system with a backup camera. Adapted the unit to seamlessly fit the dashboard and ensured proper wiring and functionality.
+  </li>
+  <li>
+    <strong>Interior & Exterior Restoration:</strong> Reupholstered the interior with hand-sewn leather, addressed ripped seat issues with foam padding, and repainted the exterior for a fresh new look.
+  </li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Automotive Diagnostics & Repair</li>
+  <li>Electrical Wiring & Console Integration</li>
+  <li>Hand-Sewing & Upholstery</li>
+  <li>Mechanical Problem Solving</li>
+</ul>
+
+
+  <h2>House Renovation Project – 554 Sullivan Trail</h2>
+<p><strong>Duration:</strong> April 2012 – August 2023</p>
+<p><strong>Role:</strong> Carpenter & Renovator</p>
+<p><strong>Location:</strong> Pocono Mountain, Pennsylvania</p>
+
+<h3>Project Overview</h3>
+<p>
+  Over a span of 11 years, I worked on a full-scale renovation of a family home, developing carpentry,
+  electrical, and logistical skills alongside my academic responsibilities.
+</p>
+<div id="house-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+<script>
+    const houseContainer = document.getElementById('house-gallery');
+  
+    const houseImages = [1, 2, 3, 5, 6, 7].map(i => `
+      <img src="house${i}.png" alt="House Renovation ${i}" style="height: 200px; flex-shrink: 0;" />
+    `).join('');
+  
+    houseContainer.innerHTML = houseImages;
+  </script>
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Carpentry & Structural Work:</strong> Framed walls to build structural strength and durability.</li>
+  <li><strong>Electrical Wiring & Safety:</strong> Installed and upgraded electrical systems to meet modern safety standards. Replaced outdated wiring, swapped old light fixtures for energy-efficient LED lighting, and installed ceiling fans in each room to improve air circulation. Additionally, set up a home security system by wiring and mounting surveillance cameras at key exterior and interior locations.</li>
+  <li><strong>Paint & Design:</strong> Enhanced aesthetic appeal and protect surfaces from environmental damage. Tasks included surface preparation (sanding, priming, and patching), selecting appropriate paint types and finishes for different materials, and applying multiple coats with precision to ensure durability and a professional finish</li>
+  <li><strong>Insulation Install</strong> Installed R-40 batt insulation in the crawlspace to improve thermal efficiency and energy conservation. Applied spray foam insulation along structural cracks and seams to seal air leaks, enhance moisture control, and ensure a tight building envelope. This work contributed to improved indoor comfort and long-term reduction in heating and cooling costs.</li>
+  <li><strong>Material Management & Logistics:</strong> Transported materials and completed weekend installations while balancing school.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Carpentry</li>
+  <li>Electrical Wiring</li>
+  <li>Project Management</li>
+  <li>Problem Solving</li>
+  <li>Time Management</li>
+</ul>
+
+<h2>Electric Shovel Guitar Project</h2>
+<p><strong>Duration:</strong> December 2022 – January 2023</p>
+<p><strong>Role:</strong> Designer & Fabricator</p>
+<p><strong>Objective:</strong> Build a fully functional electric slide guitar inside a coal shovel</p>
+
+<h3>Project Overview</h3>
+<p>
+  This project fused metal fabrication and electrical wiring to transform a coal shovel into a unique,
+  playable electric slide guitar. I read wiring blueprints, attached pickups and controls, and fabricated 
+  all mounting hardware using scrap metal, ensuring the instrument was both functional and visually striking.
+</p>
+
+<div id="shovel-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
+
+<script>
+    const shovelContainer = document.getElementById('shovel-gallery');
+  
+    const shovelImages = [1, 2, 3, 4, 5].map(i => `
+      <img src="shovel${i}.png" alt="Shovel Guitar ${i}" style="height: 200px; flex-shrink: 0;" />
+    `).join('');
+  
+    shovelContainer.innerHTML = shovelImages;
+  </script>
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Electrical Wiring:</strong> Connected guitar pickups, volume knob, and audio jack using blueprint guidance. Troubleshooted signal paths to ensure clean output.</li>
+  <li><strong>Metal Fabrication & Assembly:</strong> Designed and cut templates to shape the shovel for component mounting, and crafted custom hardware to secure strings.</li>
+  <li><strong>Creative Problem-Solving:</strong> Solved design challenges to balance aesthetics with functionality while preserving the original shovel form.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Electrical Wiring</li>
+  <li>Metal Fabrication</li>
+  <li>Creative Problem-Solving</li>
+  <li>Blueprint Reading</li>
+</ul>
+
+
+<h2>Foldable Skateboard Engineering Project</h2>
+<p><strong>Duration:</strong> July 2023 – August 2023</p>
+<p><strong>Role:</strong> Designer & Engineer</p>
+<p><strong>Objective:</strong> Enhance portability and storage for skateboard design</p>
+
+<h3>Project Overview</h3>
+<p>
+  This project focused on solving the everyday problem of skateboard storage by designing a foldable 
+  skateboard that maintains structural strength while occupying less space. The final board folds in half 
+  with three custom locking mechanisms and supports up to 170 lbs.
+</p>
+
+<div id="skate-gallery"></div>
+
+<script>
+    const container = document.getElementById('skate-gallery');
+    container.innerHTML = [1, 2, 3].map(i => 
+      `<div style="display:inline-block; margin: 10px;">
+         <img src="skate${i}.png" alt="Skateboard Project ${i}" style="height: 150px;" />
+       </div>`
+    ).join('');
+  </script>
+
+<h3>Key Activities</h3>
+<ul style="line-height: 1.8;">
+  <li><strong>Design & Engineering:</strong> Created a compact folding mechanism supported by three locking points for stability under load.</li>
+  <li><strong>Problem Solving & Testing:</strong> Addressed structural design issues and successfully conducted stress and load-bearing tests to ensure safety and usability.</li>
+</ul>
+
+<h3>Skills Gained</h3>
+<ul>
+  <li>Structural Design</li>
+  <li>Mechanical Engineering</li>
+  <li>Practical Problem Solving</li>
+</ul></main>
+</body>
+</html>
