@@ -86,12 +86,19 @@
 
 <div id="firework-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
 
+<div id="firework-gallery" style="display: flex; overflow-x: auto; gap: 10px; padding: 10px; border: 1px solid #ccc;"></div>
 <script>
   const fireworkContainer = document.getElementById('firework-gallery');
-  const fireworkImages = [1, 2, 3].map(i => `
-    <img src="firework${i}.png" alt="Firework Launcher ${i}" style="height: 200px; flex-shrink: 0;" />
+  const fireworkFiles = [
+    "Fireworklauncher.jpg",
+    "Fireworklauncher2.JPG",
+    "Fireworklauncher3.JPG",
+    "Fireworklauncher4.PNG",
+    "Fireworklauncher5.PNG"
+  ];
+  fireworkContainer.innerHTML = fireworkFiles.map((f, i) => `
+    <img src="${f}" alt="Firework Launcher ${i + 1}" style="height: 200px; flex-shrink: 0;" />
   `).join('');
-  fireworkContainer.innerHTML = fireworkImages;
 </script>
 
 <h3>Key Activities</h3>
