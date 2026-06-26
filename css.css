@@ -1,0 +1,201 @@
+/* ============================================================
+   matthewramosindustries â€” stylesheet
+   Drop-in replacement for css.css
+   ============================================================ */
+
+/* ---- Design tokens ---- */
+:root {
+  --bg:        #f7f7f5;   /* warm off-white page */
+  --surface:   #ffffff;   /* cards */
+  --text:      #1c1c1e;   /* near-black, easier than pure #000 */
+  --muted:     #6b6b73;   /* meta lines, secondary text */
+  --accent:    #c0392b;   /* a single warm accent (swap freely) */
+  --accent-dk: #8e2b20;
+  --border:    #e6e6e2;
+  --radius:    14px;
+  --shadow:    0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  --maxw:      820px;
+}
+
+/* ---- Base ---- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ---- Header / logo ---- */
+header {
+  text-align: center;
+  padding: 32px 20px 8px;
+}
+header img { width: 320px; max-width: 70%; }
+
+/* ---- Main column ---- */
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ---- Headshot ---- */
+main > img[alt="Headshot"] {
+  display: block;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 8px auto 24px;
+  border: 4px solid var(--surface);
+  box-shadow: var(--shadow);
+}
+
+/* ---- Navigation ---- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(247,247,245,.85);
+  backdrop-filter: saturate(180%) blur(8px);
+  margin: 0 -24px 32px;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border);
+}
+nav ul {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background .15s ease, color .15s ease;
+}
+nav a:hover { background: var(--accent); color: #fff; }
+/* highlight the game link */
+nav a#galaxia { background: var(--accent); color: #fff; }
+nav a#galaxia:hover { background: var(--accent-dk); }
+
+/* ---- Intro ---- */
+main > h2:first-of-type {            /* "Welcome to my portfolio!" */
+  text-align: center;
+  font-size: 1.9rem;
+  margin: 8px 0 16px;
+}
+main > h2:first-of-type + p {
+  font-size: 1.05rem;
+  color: #333;
+  text-align: left;
+  max-width: 70ch;
+  margin: 0 auto 8px;
+}
+
+/* ---- Section divider: "Personal Projects" ---- */
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 64px 0 8px;
+}
+
+/* ============================================================
+   PROJECT CARDS
+   Each project begins with an <h2>. We style the run of content
+   after each h2 as a visual block with separation + spacing.
+   ============================================================ */
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: var(--accent);
+  margin: 56px 0 4px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+/* no divider above the first project / intro */
+main > h2:first-of-type { border-top: none; padding-top: 0; margin-top: 8px; }
+h1 + h2 { border-top: none; padding-top: 0; margin-top: 24px; }
+
+h3 {
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 28px 0 8px;
+}
+
+/* meta lines (Duration / Role / Location) sit right under the h2 */
+h2 + p,
+h2 + p + p,
+h2 + p + p + p {
+  margin: 2px 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+h2 + p strong,
+h2 + p + p strong,
+h2 + p + p + p strong { color: var(--text); }
+
+p { margin: 0 0 14px; }
+
+/* bullet lists */
+ul { padding-left: 1.25rem; margin: 0 0 16px; }
+li { margin: 6px 0; }
+li strong { color: var(--text); }
+
+/* ---- Image galleries ---- */
+[id$="-gallery"] {
+  display: flex !important;
+  gap: 12px !important;
+  overflow-x: auto;
+  padding: 4px 2px 14px !important;
+  border: none !important;
+  scroll-snap-type: x mandatory;
+}
+[id$="-gallery"] img {
+  height: 220px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  scroll-snap-align: start;
+}
+/* skate gallery uses a slightly different markup */
+#skate-gallery { display: flex !important; gap: 12px; overflow-x: auto; }
+#skate-gallery img { border-radius: 10px; box-shadow: var(--shadow); }
+
+/* tidy scrollbars */
+[id$="-gallery"]::-webkit-scrollbar { height: 8px; }
+[id$="-gallery"]::-webkit-scrollbar-thumb {
+  background: var(--border); border-radius: 999px;
+}
+
+/* ---- Links (in body text) ---- */
+a { color: var(--accent); }
+a:hover { color: var(--accent-dk); }
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  main { padding: 0 16px 64px; }
+  nav { margin: 0 -16px 24px; padding: 10px 12px; }
+  h2 { font-size: 1.35rem; }
+  [id$="-gallery"] img, #skate-gallery img { height: 170px; }
+}
